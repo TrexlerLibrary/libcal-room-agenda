@@ -1,0 +1,21 @@
+{
+  "name": "libcal-room-agenda",
+  "version": "0.0.0",
+  "description": "A way to display daily events by location.",
+  "main": "index.js",
+  "dependencies": {
+    "hyperglue": "2.0.1",
+    "libcal-events": "1.1.0"
+  },
+  "devDependencies": {
+    "browserify": "13.0.0",
+    "uglify-js": "2.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "browserify main.js | uglifyjs > bundle.min.js"
+  },
+  "keywords": [],
+  "author": "Adam Malantonio <adam.malantonio@gmail.com>",
+  "license": "MIT"
+}

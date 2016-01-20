@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Adam Malantonio">
+    <title>Trexler Library Events</title>
+    <style>
+    *, *:before, *:after { box-sizing: border-box; }
+    body { font-family: 'Arial', sans-serif; }
+    .date-container { text-align: center; }
+    .time-travel { background-color: #fff; border: none; cursor: pointer; font-size: 1.125em; vertical-align: middle; }
+    .room { display: inline-block; padding: .25em; vertical-align: top; }
+    .room-name { border-bottom: 1px solid #999; border-left: 1px solid #999; padding-left: .25em; }
+    .event-meta p { margin: 0; }
+    .event-title { margin-bottom: .25em; }
+    </style>
+  </head>
+  <body>
+    <header class="date-container">
+      <h1>
+        <button class="time-travel" data-direction="back">&lt;</button>
+        <span class="date"></span>
+        <button class="time-travel" data-direction="frwd">&gt;</button>
+      </h1>
+    </header>
+    <div class="rooms-container"></div>
+    <script src="./bundle.min.js"></script>
+  </body>
+</html>
