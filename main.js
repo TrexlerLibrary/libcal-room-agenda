@@ -172,7 +172,12 @@ function formatTime (start, end) {
   return fstart + (fend ? (' - ' + fend) : '')
 
   function format (time) {
-    var t = new Date(Date.parse(time))
+    var replaced = time.replace('T', ' ')
+    var parsed = Date.parse(replaced)
+
+    if (Number.isNaN(parsed)) parsed = Date.parse(time)
+
+    var t = new Date(parsed)
     if (Number.isNaN(t)) return null
 
     var h = t.getHours()
