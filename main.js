@@ -167,8 +167,20 @@ function generateEventEl (data) {
 }
 
 function formatTime (start, end) {
-  var fstart = format(start)
-  var fend = format(end)
+  var fstart, fend
+  var allDay = /^\d{4}\-\d{2}\-\d{2}$/.test(start)
+
+  if (allDay || (!start && !end))
+    fstart = 'All day'
+  else if (!start && end)
+    fstart = 'Ends at ' + format(end)
+  else if (start && !end)
+    fstart = 'Starts at ' + format(start)
+  else {
+    fstart = format(start)
+    fend = format(end)
+  }
+
   return fstart + (fend ? (' - ' + fend) : '')
 
   function format (time) {
